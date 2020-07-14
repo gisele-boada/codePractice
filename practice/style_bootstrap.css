@@ -1,0 +1,30 @@
+.container-fluid {
+  background: #ddc3f7;
+  margin-top: 20px;
+}
+
+.container-fluid .row {
+  background-color: red;
+}
+
+.container-fluid .row .col-2 {
+  background-color: pink;
+}
+
+.container-fluid .row .col-6 {
+  background-color: green;
+}
+
+.col-md-6 {
+  background-color: orange;
+}
+
+.col-xs-12 {
+  border: 1px solid lime;
+}
+
+.btn-primary {
+  background-color: lightcoral;
+  border: none;
+}
+/*# sourceMappingURL=style_bootstrap.css.map */

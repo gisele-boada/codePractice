@@ -1,0 +1,49 @@
+body {
+    background-color:lightslategrey;
+    
+}
+
+.contenedor {
+    padding: 1em;
+    padding-top: 3em;;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat (4, 25%);
+    grid-gap: 10px;
+    
+    
+
+    div {
+        background-color: white;
+        
+         img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+    }
+
+    :first-child {
+                
+        background-color: blue;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        
+    }
+
+ 
+  
+}
+
+@media (max-width: 700px){
+    .contenedor {
+
+
+    }
+
+
+}
