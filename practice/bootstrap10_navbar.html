@@ -10,91 +10,88 @@
     <link rel="stylesheet" href="css/bootstrap_theme.css">
 <style>
 
-    .logo {
-        fill:#333333;
-    }
-    .navbar:hover .logo {
-        fill:#ff4c2e;
-    }
+.logo {
+    fill:#333333;
+}
+.navbar:hover .logo {
+    fill:#ff4c2e;
+}
 
 
-    .nav-link:hover {
-        /* font-weight: bold; */
-        /* color:#5180c9!important; */
-        color:#ff4c2e!important;
-        text-decoration: underline;
-    }
+.nav-link:hover {
+    /* font-weight: bold; */
+    /* color:#5180c9!important; */
+    color:#ff4c2e!important;
+    text-decoration: underline;
+    font-weight: bold;
+}
 
     
-    .bloc {
-        height: 100vh; 
-    }
+.bloc {
+    height: 100vh; 
+}
 
-    .cover img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-   }
+.cover img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
     
-/*     div {
-        border:1px solid;
-    } */
+.cover {
+    border: solid 10px white;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5180c9;
+}
 
-    .cover {
-        border: solid 10px white;
-       padding-left: 0!important;
-       padding-right: 0!important;
-    }
+.cover:hover .overlay {
+    opacity: 1;
+}
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: #5180c9;
-    }
+.text {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-    .cover:hover .overlay {
-        opacity: 1;
-    }
-
-    .text {
-        color: white;
-        font-size: 18px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    .image {
+.image {
         display: block;
         width: 100%;
         height: auto;
-     }
+}
 
-     .progress {border-color: transparent;}
+.progress {border-color: transparent;}
 
-     .table th, .table td {
-         border:none;
-         padding-top:0.3em!important;
-         padding-bottom:0.3em!important;
-     }
+.table th, .table td {
+    border:none;
+    padding-top:0.3em!important;
+    padding-bottom:0.3em!important;
+}
 
-     .skill {margin-right: -6em;}
-     .table th, .table td {
-        padding: 1.75rem;
-    }
+.skill {margin-right: -6em;}
+.table th, .table td {
+    padding: 1.75rem;
+}
 
+ .overlay {cursor: pointer;}
     .carousel-indicators li {
   background-color: #999;
   background-color: #5180c9;
@@ -116,7 +113,15 @@
   display: flex;
   align-items: center;}
 
+.hobbies:hover {transform: scale(1.1);}
+.social {cursor: pointer;}
+.social:hover {transform: scale(1.1);}
+          
+/* .navbar  {background-color: white!important;} */
 
+@media (max-width: 768px) {
+    .menu {background-color:white!important;}
+}
 
 </style>
 </head>
@@ -125,8 +130,9 @@
 
 <body>
 
+
   <!-- menu nav -->
-<nav class="navbar navbar-expand-md navbar-light fixed-top "  style="background-color: rgba(255, 255, 255, 0.3);">
+<nav class="navbar navbar-expand-md navbar-light fixed-top menu"  style="background-color: rgba(255, 255, 255, 0.3);">
     <div class="container">
         <a href="#" class="navbar-brand ">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="189.2px"
@@ -162,8 +168,8 @@
         <div class="collapse navbar-collapse" id="firstNavbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link pr-3 dropdown-toggle" data-toggle="dropdown">work</a>   
-                        <div class="dropdown-menu">
+                    <a href="#" class="nav-link pr-3 dropdown-toggle" data-toggle="dropdown" >work</a>   
+                        <div class="dropdown-menu" >
                             <a href="#" class="dropdown-item">Plastificados</a>
                             <a href="#" class="dropdown-item">Loopus Festival</a>
                             <a href="#" class="dropdown-item">Granini</a>
@@ -181,8 +187,24 @@
 <!-- menu nav end-->
 
 <!-- home page -->
-<div class="container-fluid bloc">
-
+<div class="container-fluid bloc bg-primary" style="background-image: url(img/home_bg.png); background-position: bottom right; background-repeat: no-repeat;background-size: 100%;">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col col-12 col-lg-6 justify-content-center text-left float-left text-light">
+                <h2>Web Designer & <br> Front-End Developer</h2>
+                <h3 class="py-2 "><em><mark class="text-primary">Developing UX/UI skills</mark></em></h3>
+                <p><strong>This is Gisèle and welcome to my Porfolio!</strong></p>
+            </div>
+        </div>
+    </div>
+   <!--  <div class="row h-100 align-items-center">
+        <div class="col-lg-1"></div>
+        <div class="col col-12 col-lg-3 justify-content-center text-left float-left text-light">
+            <h2>Web Designer & <br> Front-End Developer</h2>
+            <h3 class="py-2"><em><mark>Developing UX/UI skills</mark></em></h3>
+            <p>This is Gisèle, welcome to my site!</p>
+        </div>
+    </div> -->
 </div>
 <!-- home page end  -->
 
@@ -232,8 +254,8 @@
 
 <div class="container ">
     <div class="row ">
-        <div class="col-12 col-lg-6 " style="background-color: white; filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="col-12 col-lg-6" style="background-color: white; filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));">
+            <div id="carouselExampleControls" class="carousel slide align-items-end" data-ride="carousel">
 
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -433,7 +455,7 @@
                   </div>
                   <div class="carousel-item pt-4 pb-4">
                     <div class=" container p-5 px-5" style="padding-bottom: 2rem !important;">
-                        <h1 class="text-center" style="color: #5180c9; font-size: 1.5rem; line-height: 1.2;">Hobbies</h1>
+                        <h1 class="text-center display-4" style="color: #5180c9;font-size: 3rem; line-height: 1.2;">Hobbies</h1>
                         <div class="container p-5">
                             <div class="row">
                                 <div class="col text-center hobbies p-4">
@@ -465,7 +487,7 @@
                         <div class="container py-3 px-5 ">
                             
                             <div class="row">
-                                <h1 class="col text-center px-5" style="color: #5180c9; font-size: 1.8rem; line-height: 1.2;">Descubre el resto sobre mí aquí.</h1>
+                                <h1 class="col text-center px-5 display-4" style="color: #5180c9; font-size: 2.2rem; line-height: 1.2;">Descubre el resto sobre mí aquí.</h1>
                             </div>
                             <div class="row">
                                 <button class="btn-lg btn-danger btn-block mx-5 mt-4"><a target="_blank" style="color:white; text-decoration:none;" href="https://www.linkedin.com/in/giseleboada/">LinkedIn</a></button>
@@ -489,36 +511,40 @@
 </div>
 <!--end about -->
 <!-- contact -->
-<div class="container justify-content-center text-center" style="height: 60vh;">
+<div class="container justify-content-center text-center" style="height: 75vh;">
     <div class="row contact justify-content-center p-5 align-items-center">
         <div class="col col-12 col-lg-6 p-5 d-none d-lg-block d-xl-block">
             <img src="img/bye.png">
         </div> 
         <div class="col col-12 col-lg-6 px-lg-5">
-            <h1 class="text-primary pb-2">¡Contactame!</h1>
+            <h1 class="text-primary pb-2">¡Contáctame!</h1>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
             <div class="row justify-content-center d-flex align-items-center px-3">
-                <div class="col col-2">
-                    <img src="img/social_1.svg">
+                <div class="col col-2 px-3 social">
+                    <a target="_blank" href="https://www.linkedin.com/in/giseleboada/"><img src="img/social_1.svg"></a>
                 </div>
-                <div class="col col-2">
-                    <img src="img/social_2.svg">
+                <div class="col col-2 social">
+                    <a target="_blank" href="https://www.behance.net/giseleboada"><img src="img/social_2.svg"></a>
                 </div>
-                <div class="col col-2">
-                    <img src="img/social_3.svg">
+                <div class="col col-2 social">
+                    <a target="_blank" href="https://www.instagram.com/giseleindesign/?hl=es"><img src="img/social_3.svg"></a>
                 </div>
-                <div class="col col-2">
-                    <img src="img/social_4.svg">
+                <div class="col col-2 social">
+                    <a target="_blank" href="https://www.youtube.com/channel/UCdmHATjnpk7-MMWvUPQ36vQ/videos"><img src="img/social_4.svg"></a>
                 </div>
-                <div class="col col-2">
-                    <img src="img/social_5.svg">
+                <div class="col col-2 social" >
+                    <a target="_blank" href="mailto:gisele.boada@gmail.com"><img src="img/social_5.svg" data-toggle="tooltip" title="gisele.boada@gmail.com"></a>
                 </div>
             </div>
         </div> 
     </div>
 </div>
+<!-- end contact -->
 
-  
+<!-- footer -->
+<div class="container-fluid justify-content-center text-center fixed-bottom pt-2 text-light" style="height: 40px; background-color: #517fc9ab;">© Gisèle Boada 2020</div>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
